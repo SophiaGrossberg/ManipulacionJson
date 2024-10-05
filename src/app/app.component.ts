@@ -10,6 +10,21 @@ import { HttpClient } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
 
+  userId=1;
+  userData={
+    name:"",
+    email:""
+  }
+  
+  constructor (private userService: UserService){}
+
+  updateUser(){
+      this.userService.updateUser(this.userId, this.userData).subscribe(response => {
+          console.log('Usuario Actualizado')
+      })
+  }
+  
+
   usuarios: Usuario[] = []; 
   nuevousuario: Usuario = { nombre: '', email: '', empresa: '' };  // Inicializar el objeto Usuario
 
@@ -51,6 +66,8 @@ this.http.post('https://jsonplaceholder.typicode.com/users',body).subscribe(resp
 })
 
 }
+
+
 
 }
 

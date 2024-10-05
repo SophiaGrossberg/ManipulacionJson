@@ -1,0 +1,39 @@
+.usuario-container {
+    display: grid; /* Usamos grid para la cuadrícula */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cuadrícula responsiva */
+    gap: 16px; /* Espacio entre las tarjetas */
+    padding: 20px;
+  }
+  
+  .usuario-card {
+    border: 1px solid #ccc; /* Borde de las tarjetas */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 16px; /* Espacio interior */
+    display: flex; /* Usamos flexbox para alinear contenido dentro de la tarjeta */
+    justify-content: space-between; /* Espacio entre la información y los botones */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #f9f9f9; /* Color de fondo de las tarjetas */
+  }
+  
+  .usuario-info {
+    flex-grow: 1; /* Ocupa el espacio disponible */
+  }
+  
+  .usuario-buttons {
+    display: flex; /* Alinea los botones en línea */
+    gap: 8px; /* Espacio entre los botones */
+  }
+  
+  .usuario-form {
+    margin-top: 20px; /* Espacio superior para los formularios */
+    display: flex; /* Alinea los campos del formulario en línea */
+    gap: 8px; /* Espacio entre los campos */
+    color: black;
+  }
+  
+  body {
+    background-color: black;  /* Fondo oscuro */
+    color: #ffffff;             /* Texto claro para contrastar */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
